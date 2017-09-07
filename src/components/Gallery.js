@@ -8,7 +8,7 @@ class Gallery extends React.Component {
     return (
       <div className="gallery">
         {products.map((item, index) => {
-          return <Product key={index} {...item}></Product>; //using the map function to loop over all our products and map it to the product component. Instead of saying item.name equals the name within the Product component, the spread operator does this for us. 
+          return <Product key={index} {...item}></Product>; //using the map function to loop over all our products and map it to the product component. Instead of saying item.name equals the name within the Product component, the spread operator does this for us.
         })}
       </div>
     );
