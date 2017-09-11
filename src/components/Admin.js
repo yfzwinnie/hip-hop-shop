@@ -6,7 +6,7 @@ class Admin extends React.Component {
   render() {
     return (
       <div>
-        <AddProductForm addProduct={this.props.addProduct}/>
+        <AddProductForm products={this.props.products} addProductPost={this.props.addProductPost}/>
       </div>
     )
   }
