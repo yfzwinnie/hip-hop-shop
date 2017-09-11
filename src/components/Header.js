@@ -5,7 +5,16 @@ const Header = () => {
   return(
       <header>
         <div className="logo">
-          IDFWU
+            Boom &nbsp;Bap &nbsp;Shop
+        </div>
+        <div className="navigation-bar categories">
+          <ul>
+            <li>Crib</li>
+            <li>Tech</li>
+            <li>Threads</li>
+            <li>Media</li>
+            <li>Vice</li>
+          </ul>
         </div>
         <nav className="navigation-bar">
           <ul>
