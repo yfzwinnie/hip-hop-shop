@@ -5,7 +5,7 @@ class Product extends React.Component {
   render() {
     const { name, link, image, description, price, category, fullWidth } = this.props;
     return (
-      <div className={fullWidth === true ? "full-width" : "product-detail"}>
+      <div className={fullWidth === "true" ? "product-detail full-width" : "product-detail"}>
           <div className="product-image">
               <a href={link}>
                 <img src={image} alt={name} />

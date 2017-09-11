@@ -25,7 +25,13 @@ class AddProductForm extends React.Component {
           <input ref={(input) => this.image = input} type="text" placeholder="Product Image"/>
           <textarea ref={(input) => this.description = input} placeholder="Product Description"></textarea>
           <input ref={(input) => this.price = input} type="text" placeholder="Product Price"/>
-          <input ref={(input) => this.category = input} type="text" placeholder="Product Category"/>
+          <label>Product Category<select ref={(input) => this.category = input}>
+            <option value="Crib">Crib</option>
+            <option value="Tech">Tech</option>
+            <option value="Threads">Threads</option>
+            <option value="Media">Media</option>
+            <option value="Vice">Vice</option>
+          </select></label>
           <label>Full Width?<select ref={(input) => this.fullWidth = input}>
             <option value={false}>No</option>
             <option value={true}>Yes</option>
