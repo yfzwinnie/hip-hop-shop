@@ -4,6 +4,7 @@ import '../css/App.css';
 import Header from './Header';
 import Gallery from './Gallery';
 import Admin from './Admin';
+import SignUpForm from './SignUpForm';
 import { Route } from 'react-router-dom';
 
 class App extends React.Component {
@@ -108,6 +109,9 @@ class App extends React.Component {
             />
           <Route path="/admin" exact
               render={() => <Admin products={this.state.products} addProductPost={this.addProductPost}/>}
+            />
+          <Route path="/signup" exact
+              render={() => <SignUpForm />}
             />
         </div>
       </div>
