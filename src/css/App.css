@@ -518,6 +518,10 @@ nav ul li {
   color: #fff;
 }
 
+.categories ul li a:hover {
+  border-bottom: 2px solid #fff;
+}
+
 
 
 .product-detail {
