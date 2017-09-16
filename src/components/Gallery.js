@@ -16,9 +16,11 @@ class Gallery extends React.Component {
     return (
       <div className="gallery">
         {products.filter((item, index) => {
-          console.log(item);
-          console.log(this.parseUrl().category);
-          return item.category.toLowerCase() === this.parseUrl().category;
+          if (Object.keys(this.parseUrl()).length === 0) {
+            return true;
+          } else {
+            return item.category.toLowerCase() === this.parseUrl().category;
+          }
         }).map((item, index) => {
           return <Product key={index} {...item}></Product>; //using the map function to loop over all our products and map it to the product component. Instead of saying item.name equals the name within the Product component, the spread operator does this for us.
         })}
