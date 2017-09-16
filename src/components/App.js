@@ -104,7 +104,7 @@ class App extends React.Component {
         <Header products={this.state.products}/>
         <div className="container">
           <Route path="(/|/fresh)" exact
-              render={() => <Gallery products={this.state.products}
+              render={(props) => <Gallery products={this.state.products} {...props}
                />}
             />
           <Route path="/admin" exact

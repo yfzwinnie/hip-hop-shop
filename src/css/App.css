@@ -497,19 +497,27 @@ a {
   margin: -20px 0;
 }
 
+
 div ul li {
   display: inline-block;
   font-size: 1.2em;
-  color: #fff;
   margin: 10px 20px 0 5px;
+}
+
+div ul li a {
+  color: #404042;
 }
 
 nav ul li {
   display: inline-block;
   margin: 10px 20px 0 5px;
   font-size: 1.5em;
-  color: #404042;
 }
+
+.categories ul li a {
+  color: #fff;
+}
+
 
 
 .product-detail {
