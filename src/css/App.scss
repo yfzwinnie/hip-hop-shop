@@ -1,3 +1,6 @@
+/* import scss */
+@import './_colors.scss';
+
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -455,7 +458,7 @@ template {
 }
 
 body {
-  background-color: #EDEFF2;
+  background-color: $light-grey;
 }
 
 a {
@@ -474,16 +477,16 @@ a {
 }
 
 .logo {
-  background-color: #404042;
+  background-color: $dark-grey;
   text-align: center;
   font-size: 3em;
-  color: #fff;
+  color: $white;
   font-family: 'Monoton', cursive;
   padding: 20px 0;
 }
 
 .navigation-bar {
-  background-color: #fff;
+  background-color: $white;
   height: 50px;
   text-align: center;
   text-transform: uppercase;
@@ -493,7 +496,7 @@ a {
 }
 
 .categories {
-  background-color: #404042;
+  background-color: $dark-grey;
   margin: -20px 0;
 }
 
@@ -505,27 +508,31 @@ div ul li {
 }
 
 div ul li a {
-  color: #404042;
+  color: $dark-grey;
 }
 
-nav ul li {
-  display: inline-block;
-  margin: 10px 20px 0 5px;
-  font-size: 1.5em;
+nav {
+  ul {
+    li {
+      display: inline-block;
+      margin: 10px 20px 0 5px;
+      font-size: 1.5em;
+    }
+  }
 }
 
 .categories ul li a {
-  color: #fff;
+  color: $white;
 }
 
 .categories ul li a:hover {
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid $white;
 }
 
 
 
 .product-detail {
-  background-color: #fff;
+  background-color: $white;
   width: 45%;
   margin: 2.5%;
   border: 1px solid #d0d4db;
@@ -568,7 +575,7 @@ nav ul li {
   float: right;
   margin-right: 5px;
   font-size: 0.8em;
-  color: red;
+  color: $red;
 }
 
 .product-category {
