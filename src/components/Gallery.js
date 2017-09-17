@@ -1,5 +1,6 @@
 import React from 'react';
 import Product from './Product';
+import { CSSTransitionGroup } from 'react-transition-group';
 const queryString = require('query-string');
 
 class Gallery extends React.Component {
@@ -22,7 +23,18 @@ class Gallery extends React.Component {
             return item.category.toLowerCase() === this.parseUrl().category;
           }
         }).map((item, index) => {
-          return <Product key={index} {...item}></Product>; //using the map function to loop over all our products and map it to the product component. Instead of saying item.name equals the name within the Product component, the spread operator does this for us.
+          return (
+            <CSSTransitionGroup
+              component="div"
+              transitionName="product"
+              transitionAppear={true}
+              transitionAppearTimeout={10000}
+              transitionEnterTimeout={10000}
+              transitionLeaveTimeout={10000}
+            >
+              <Product key={index} {...item}></Product>
+            </CSSTransitionGroup>
+            ); //using the map function to loop over all our products and map it to the product component. Instead of saying item.name equals the name within the Product component, the spread operator does this for us.
         })}
       </div>
     );

@@ -1,0 +1,23 @@
+.product-appear {
+    opacity: .1;
+    transition: all .5s;
+    &.product-appear-active {
+        opacity: 1;
+    }
+}
+
+.product-enter {
+    opacity: .1;
+    transition: all .5s;
+    &.product-enter-active {
+        opacity: 1;
+    }
+}
+
+.product-leave {
+    opacity: 1;
+    transition: all .5s;
+    &.product-leave-active {
+        opacity: .1;
+    }
+}
