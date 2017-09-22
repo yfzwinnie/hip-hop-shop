@@ -101,9 +101,9 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Header products={this.state.products}/>
+        <Header products={this.state.products} />
         <div className="container">
-          <Route path="(/|/fresh)" exact
+          <Route path="/" exact
               render={(props) => <Gallery products={this.state.products} {...props}
                />}
             />

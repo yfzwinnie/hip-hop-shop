@@ -524,10 +524,14 @@ nav {
 
 .categories ul li a {
   color: $white;
-}
 
-.categories ul li a:hover {
-  border-bottom: 2px solid $white;
+  &:hover {
+    border-bottom: 2px solid $white;
+  }
+
+  &.active {
+    border-bottom: 2px solid $white;
+  }
 }
 
 
