@@ -455,7 +455,15 @@ template {
 * {
   font-family: 'Quicksand', sans-serif;
   box-sizing: border-box;
-  color: #404042;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 body {
@@ -519,6 +527,12 @@ a {
         font-size: 1.15em;
         margin: 10px 10px 0 10px;
       }
+    }
+  }
+
+  .search-icon {
+    svg {
+    color: $white;
     }
   }
 }

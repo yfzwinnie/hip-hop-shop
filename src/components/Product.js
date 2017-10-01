@@ -1,4 +1,6 @@
 import React from 'react';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/fontawesome-free-solid';
 import { formatPrice } from '../helpers';
 
 class Product extends React.Component {
@@ -17,7 +19,9 @@ class Product extends React.Component {
             </h3>
             <p className="product-category">{category}</p>
             <p className="product-description">{description}</p>
-            
+            <button>
+              <FontAwesomeIcon iconDefinition={faHeart} />
+            </button>
           </div>
       </div>
     )

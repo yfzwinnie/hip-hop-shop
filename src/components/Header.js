@@ -1,5 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/fontawesome-free-solid';
 const queryString = require('query-string');
 
 const Header = (props) => {
@@ -21,6 +23,9 @@ const Header = (props) => {
             <li><NavLink to={{pathname: '/', search: '?category=media'}} isActive={() => parseUrl().category === "media"}>Media</NavLink></li>
             {/* <li><NavLink to={{pathname: '/', search: '?category=vice'}} isActive={() => parseUrl().category === "vice"}>Vice</NavLink></li> */}
           </ul>
+          <button className="search-icon">
+            <FontAwesomeIcon iconDefinition={faSearch} />
+          </button>
         </div>
         {/* <nav className="navigation-bar">
           <ul>
