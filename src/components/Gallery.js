@@ -25,6 +25,7 @@ class Gallery extends React.Component {
         }).map((item, index) => {
           return (
             <CSSTransitionGroup
+              key={index}
               component="div"
               transitionName="product"
               transitionAppear={true}

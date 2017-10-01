@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 const queryString = require('query-string');
 
 const Header = (props) => {
@@ -7,7 +7,7 @@ const Header = (props) => {
     const parsed = queryString.parse(window.location.search);
     return parsed;
   }
-  console.log(window.location.search);
+
   return(
       <header>
         <div className="logo">
@@ -19,7 +19,7 @@ const Header = (props) => {
             <li><NavLink to={{pathname: '/', search: '?category=tech'}} isActive={() => parseUrl().category === "tech"}>Tech</NavLink></li>
             <li><NavLink to={{pathname: '/', search: '?category=threads'}} isActive={() => parseUrl().category === "threads"}>Threads</NavLink></li>
             <li><NavLink to={{pathname: '/', search: '?category=media'}} isActive={() => parseUrl().category === "media"}>Media</NavLink></li>
-            <li><NavLink to={{pathname: '/', search: '?category=vice'}} isActive={() => parseUrl().category === "vice"}>Vice</NavLink></li>
+            {/* <li><NavLink to={{pathname: '/', search: '?category=vice'}} isActive={() => parseUrl().category === "vice"}>Vice</NavLink></li> */}
           </ul>
         </div>
         {/* <nav className="navigation-bar">

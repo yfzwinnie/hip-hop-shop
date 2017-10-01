@@ -15,8 +15,9 @@ class Product extends React.Component {
             <h3 className="product-name">{name}
               <span className="product-price">{formatPrice(price)}</span>
             </h3>
-            <p className="product-description">{description}</p>
             <p className="product-category">{category}</p>
+            <p className="product-description">{description}</p>
+            
           </div>
       </div>
     )
