@@ -25,7 +25,7 @@ class Gallery extends React.Component {
         }).map((item, index) => {
           return (
             <CSSTransitionGroup
-              key={index}
+              key={item.title}
               component="div"
               transitionName="product"
               transitionAppear={true}
@@ -33,7 +33,7 @@ class Gallery extends React.Component {
               transitionEnterTimeout={10000}
               transitionLeaveTimeout={10000}
             >
-              <Product key={index} {...item}></Product>
+              <Product key={item.title} {...item}></Product>
             </CSSTransitionGroup>
             ); //using the map function to loop over all our products and map it to the product component. Instead of saying item.name equals the name within the Product component, the spread operator does this for us.
         })}

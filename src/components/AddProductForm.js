@@ -30,13 +30,12 @@ class AddProductForm extends React.Component {
             <option value="Tech">Tech</option>
             <option value="Threads">Threads</option>
             <option value="Media">Media</option>
-            <option value="Vice">Vice</option>
           </select></label>
           <label>Full Width?<select ref={(input) => this.fullWidth = input}>
             <option value={false}>No</option>
             <option value={true}>Yes</option>
           </select></label>
-          <button type="submit">+ Add Product</button>
+          <button className="btn" type="submit">+ Add Product</button>
         </form>
       </div>
     )

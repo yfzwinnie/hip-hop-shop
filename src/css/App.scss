@@ -458,6 +458,7 @@ template {
 }
 
 button {
+  font-family: 'Quicksand', sans-serif;
   background-color: transparent;
   border: none;
   outline: none;
@@ -497,70 +498,63 @@ a {
   }
 }
 
-.logo {
-  background-color: $dark-grey;
-  text-align: center;
-  font-size: 2.75em;
-  color: $white;
-  font-family: 'Monoton', cursive;
-  padding: 20px 0 10px 0;
-}
-
 .navigation-bar {
-  background-color: $white;
+  position: relative;
+  background-color: $dark-grey;
+  color: $white;
   text-align: center;
   text-transform: uppercase;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-bottom: .5px solid darken($dark-grey, 5%);
-  list-style: none;
-  margin-top: 0;
 
-  &.categories {
-    background-color: $dark-grey;
-    padding-bottom: 10px;
-    margin: -20px 0 5px 0;
+  .logo {
+    
+    a {
+      text-align: center;
+      font-size: 2.75em;
+      color: $white;
+      font-family: 'Monoton', cursive;
+      padding: 20px 0 10px 0;
+    }
+  }
 
-    ul {
-      padding-left: 0;
+  .categories {
+    padding-left: 0;
+    list-style: none;
+    margin: 0 auto;
+    display: inline-block;
+    width: 80%;
 
-      li {
-        display: inline-block;
-        font-size: 1.15em;
-        margin: 10px 10px 0 10px;
+    li {
+      display: inline-block;
+      font-size: 1.15em;
+      margin: 10px 10px 0 10px;
+      a {
+        color: $white;
+        &:hover {
+          border-bottom: 2px solid $white;
+        }
+      
+        &.active {
+          border-bottom: 2px solid $white;
+        }
       }
     }
   }
 
   .search-icon {
-    svg {
     color: $white;
+    font-weight: bold;
+    position: absolute;
+    right: 17%;
+    bottom: 20px;
+    text-transform: uppercase;
+    svg {
+      margin-left: 10px;
     }
   }
 }
-
-// TODO: Clean up the nav styles
-nav {
-  ul {
-    li {
-      display: inline-block;
-      margin: 10px 20px 0 5px;
-      font-size: 1.5em;
-    }
-  }
-}
-
-.categories ul li a {
-  color: $white;
-
-  &:hover {
-    border-bottom: 2px solid $white;
-  }
-
-  &.active {
-    border-bottom: 2px solid $white;
-  }
-}
-
-
 
 .product-detail {
   background-color: $white;
@@ -604,6 +598,10 @@ nav {
     font-size: .9em;
     color: lighten($dark-grey, 15%);
   }
+
+  svg {
+    color: $dark-grey;
+  }
 }
 
 
@@ -628,18 +626,28 @@ nav {
 
 
 
-.product-edit input, textarea, label {
-  display: block;
-  font-size:15px;
-  padding:4px 2px;
-  border:solid 1px #d0d4db;
-  width: 600px;
-  margin:5px 0 20px 10px;
-}
+.product-edit {
+  input, textarea, label {
+    display: block;
+    font-size: 15px;
+    padding: 10px;
+    border: solid 1px #d0d4db;
+    width: 600px;
+    margin: 5px 0 20px 10px;
+  }
+  
 
-.product-edit label {
-  border-style: none;
-  font-size: 1em;
+  p {
+    a {
+      color: blue;
+    }
+    
+  }
+
+  button {
+    margin-left: 10px;
+    border-radius: 2px;
+  }
 }
 
 .product-edit select {
@@ -648,9 +656,4 @@ nav {
 
 .product-edit textarea {
   height: 100px;
-}
-
-.product-edit button {
-  margin-left: 10px;
-  border-radius: 2px;
 }

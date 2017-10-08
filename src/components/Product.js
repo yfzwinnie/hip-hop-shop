@@ -1,6 +1,6 @@
 import React from 'react';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/fontawesome-free-solid';
+import { faBookmark, faShareSquare } from '@fortawesome/fontawesome-free-solid';
 import { formatPrice } from '../helpers';
 
 class Product extends React.Component {
@@ -20,7 +20,10 @@ class Product extends React.Component {
             <p className="product-category">{category}</p>
             <p className="product-description">{description}</p>
             <button>
-              <FontAwesomeIcon iconDefinition={faHeart} />
+              <FontAwesomeIcon iconDefinition={faShareSquare} />
+            </button>
+            <button>
+              <FontAwesomeIcon iconDefinition={faBookmark} />
             </button>
           </div>
       </div>

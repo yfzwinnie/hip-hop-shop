@@ -11,12 +11,12 @@ const Header = (props) => {
   }
 
   return(
-      <header>
-        <div className="logo">
-            Boom &nbsp;Bap &nbsp;Shop
-        </div>
-        <div className="navigation-bar categories">
-          <ul>
+      <header>      
+        <div className="navigation-bar">
+          <div className="logo">
+            <NavLink to="/">Boom &nbsp;Bap &nbsp;Shop</NavLink>
+          </div>
+          <ul className="categories">
             <li><NavLink to={{pathname: '/', search: '?category=crib'}} isActive={() => parseUrl().category === "crib"}>Crib</NavLink></li>
             <li><NavLink to={{pathname: '/', search: '?category=tech'}} isActive={() => parseUrl().category === "tech"}>Tech</NavLink></li>
             <li><NavLink to={{pathname: '/', search: '?category=threads'}} isActive={() => parseUrl().category === "threads"}>Threads</NavLink></li>
@@ -24,6 +24,7 @@ const Header = (props) => {
             {/* <li><NavLink to={{pathname: '/', search: '?category=vice'}} isActive={() => parseUrl().category === "vice"}>Vice</NavLink></li> */}
           </ul>
           <button className="search-icon">
+            Search
             <FontAwesomeIcon iconDefinition={faSearch} />
           </button>
         </div>
