@@ -31,25 +31,27 @@ class LogInForm extends React.Component {
   render() {
     return(
       <div className="container">
-        <h2>Welcome back.</h2>
-        <form ref={(input) => this.SignUpForm = input} className="product-edit">
-          <input
-            name="name"
-            type="text"
-            placeholder="Email Address"
-            onChange={this.handleInputChange}
-            value={this.state.name}
-          />
-          <input
-            name="password"
-            type="password"
-            placeholder="Password"
-            onChange={this.handleInputChange}
-            value={this.state.password}
-          />
-          <button type="submit" className="btn">Log In</button>
-          <p>Don't have an account? <Link to="/signup">Sign Up.</Link></p>
-        </form>
+        <div className="form-container">
+          <h2>Yo, Welcome back.</h2>
+          <form ref={(input) => this.SignUpForm = input} className="product-edit">
+            <input
+              name="name"
+              type="text"
+              placeholder="Email Address"
+              onChange={this.handleInputChange}
+              value={this.state.name}
+            />
+            <input
+              name="password"
+              type="password"
+              placeholder="Password"
+              onChange={this.handleInputChange}
+              value={this.state.password}
+            />
+            <button type="submit" className="btn btn-primary">Log In</button>
+            <p>Don't have an account? <Link to="/signup">Sign Up.</Link></p>
+          </form>
+        </div>
       </div>
     )
   }

@@ -1,10 +1,41 @@
 import React from 'react';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/fontawesome-free-solid';
 
 class AddProductForm extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      productName: '',
+      link: '',
+      image: '',
+      description: '',
+      price: '',
+      category: '',
+      fullWidth: false
+    }
+
+    this.handleInputChange = this.handleInputChange.bind(this);
+  }
+
+  handleInputChange(event) {
+    let target = event.target,
+        name = target.name,
+        value = target.value;
+
+        this.setState({
+          [name]: value
+        });
+  }
+
+  handleSubmit() {
+    console.log(this.state)
+  }
   createProductPost(event) {
     event.preventDefault();
     const product = {
-      name: this.name.value,
+      productName: this.name.value,
       link: this.link.value,
       image: this.image.value,
       description: this.description.value,
@@ -19,23 +50,48 @@ class AddProductForm extends React.Component {
   render() {
     return(
       <div className="container">
-        <form ref={(input) => this.productForm = input} className="product-edit" onSubmit={(e) => this.createProductPost(e)}>
-          <input ref={(input) => this.name = input} type="text" placeholder="Product Name"/>
-          <input ref={(input) => this.link = input} type="text" placeholder="Product Link"/>
-          <input ref={(input) => this.image = input} type="text" placeholder="Product Image"/>
+        <h2>Add Product</h2>
+        <form onSubmit={this.onSubmit} className="product-edit">
+          <input 
+            name="productName"
+            value={this.state.productName}
+            onChange={this.handleInputChange}
+            type="text"
+            placeholder="Product Name"
+          />
+          <input
+            name="link"
+            value={this.state.link}
+            onChange={this.handleInputChange}
+            type="text"
+            placeholder="Product Link"
+          />
+          <input
+            name="image"
+            value={this.state.image}
+            onChange={this.handleInputChange}
+            type="text"
+            placeholder="Product Image"
+          />
           <textarea ref={(input) => this.description = input} placeholder="Product Description"></textarea>
-          <input ref={(input) => this.price = input} type="text" placeholder="Product Price"/>
+          <input
+            name="price"
+            value={this.state.image}
+            onChange={this.handleInputChange}
+            type="text"
+            placeholder="Product Price"
+          />
           <label>Product Category<select ref={(input) => this.category = input}>
             <option value="Crib">Crib</option>
             <option value="Tech">Tech</option>
             <option value="Threads">Threads</option>
             <option value="Media">Media</option>
           </select></label>
-          <label>Full Width?<select ref={(input) => this.fullWidth = input}>
+          <label>Featured?<select ref={(input) => this.fullWidth = input}>
             <option value={false}>No</option>
             <option value={true}>Yes</option>
           </select></label>
-          <button className="btn" type="submit">+ Add Product</button>
+          <button className="btn" type="submit"><FontAwesomeIcon iconDefinition={faPlus} /> Add Product</button>
         </form>
       </div>
     )

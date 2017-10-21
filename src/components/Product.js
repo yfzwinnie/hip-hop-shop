@@ -14,17 +14,27 @@ class Product extends React.Component {
               </a>
           </div>
           <div className="product-info">
-            <h3 className="product-name">{name}
-              <span className="product-price">{formatPrice(price)}</span>
-            </h3>
-            <p className="product-category">{category}</p>
+            <h3 className="product-name">{name}</h3>
+            <div className="product-category">
+              <span>{category}</span>
+            </div> 
             <p className="product-description">{description}</p>
-            <button>
-              <FontAwesomeIcon iconDefinition={faShareSquare} />
-            </button>
-            <button>
-              <FontAwesomeIcon iconDefinition={faBookmark} />
-            </button>
+            <div className="product-footer">
+              <div className="product-action">
+                <a href={link} target="_blank" className="product-action">
+                  Learn More ||
+                  <span className="product-price">{formatPrice(price)}</span>
+                </a>
+              </div>
+              <div className="product-footer-icons">
+                <button>
+                  <FontAwesomeIcon iconDefinition={faShareSquare} />
+                </button>
+                <button>
+                  <FontAwesomeIcon iconDefinition={faBookmark} />
+                </button>
+              </div>
+            </div> 
           </div>
       </div>
     )

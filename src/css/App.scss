@@ -467,8 +467,8 @@ button {
   }
 }
 
-body {
-  background-color: $light-grey;
+body { 
+  background: $light-grey;
 }
 
 a {
@@ -495,6 +495,13 @@ a {
   &:hover {
     cursor: pointer;
     background-color: darken(lighten($dark-grey, 25%), 10%);
+  }
+
+  &.btn-primary {
+    background-color: $red;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: inset 0 -3px rgba(0,0,0,.2);
   }
 }
 
@@ -558,17 +565,18 @@ a {
 
 .product-detail {
   background-color: $white;
+  height: 480px;
   width: 46%;
   margin: 2%;
   box-shadow: 0 0 5px lighten($dark-grey, 50%);
-  padding: 5px;
+  padding: 15px;
   float: left;
   border-radius: 5px;
+  position: relative;
 
   .product-image {
-    height: 320px;
+    height: 254px;
     text-align: center;
-    margin: 20px;
 
     img {
       max-width: 100%;
@@ -576,22 +584,68 @@ a {
     }
   }
 
-  .product-price {
-    float: right;
-    margin-right: 5px;
-    font-size: 0.8em;
-    color: $red;
+  .product-name {
+    text-align: center;
   }
 
+  .product-action {
+    display: inline-block;
+    width: 75%;
+  
+    a {
+      display: inline;
+      background-color: $red;
+      padding: 4px 9px;
+      color: $white;
+
+      &:hover {
+        background-color: darken($red, 15%);
+      }
+
+      .product-price {
+        margin-left: 5px;
+        font-size: 0.8em;
+      }
+    }
+
+    
+  }
+  .product-footer {
+    width: 100%;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    padding: 0 15px 0 15px;
+  }
+
+  .product-footer-icons {
+    display: inline-block;
+    width: 25%;
+    text-align: right;
+  }
+  
+
   .product-category {
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: -1px;
+    text-align: center;
+  
+    span {
+       display: inline-block;
+       padding: 4px 9px;
+       font-weight: bold;
+       color: $white;
+       text-transform: uppercase;
+       letter-spacing: -1px;
+       background-color: $dark-grey;
+    }
   }
 
   .product-info {
-    height: 110px;
-    margin: 5% 2% 2% 2%;
+    margin: 10px 0 10px 0;
+
+    h3 {
+      margin-top: 12px;
+      margin-bottom: 10px;
+    }
   }
 
   .product-description {
@@ -625,6 +679,18 @@ a {
 
 
 
+.form-container {
+  margin-top: 25px;
+  border-radius: 1px;
+  background-color: $white;
+  border: 2px solid $lighter-grey;
+  padding: 30px;
+
+  h2 {
+    margin-top: 0;
+    text-align: center;
+  } 
+}
 
 .product-edit {
   input, textarea, label {
@@ -632,8 +698,8 @@ a {
     font-size: 15px;
     padding: 10px;
     border: solid 1px #d0d4db;
-    width: 600px;
-    margin: 5px 0 20px 10px;
+    width: 100%;
+    margin-bottom: 25px;
   }
   
 
@@ -645,8 +711,9 @@ a {
   }
 
   button {
+    float: right;
     margin-left: 10px;
-    border-radius: 2px;
+    border-radius: 1px;
   }
 }
 
