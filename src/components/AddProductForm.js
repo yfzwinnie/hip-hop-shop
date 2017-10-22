@@ -20,6 +20,7 @@ class AddProductForm extends React.Component {
   }
 
   handleInputChange(event) {
+    console.log(event);
     let target = event.target,
         name = target.name,
         value = target.value;
@@ -50,49 +51,51 @@ class AddProductForm extends React.Component {
   render() {
     return(
       <div className="container">
-        <h2>Add Product</h2>
-        <form onSubmit={this.onSubmit} className="product-edit">
-          <input 
-            name="productName"
-            value={this.state.productName}
-            onChange={this.handleInputChange}
-            type="text"
-            placeholder="Product Name"
-          />
-          <input
-            name="link"
-            value={this.state.link}
-            onChange={this.handleInputChange}
-            type="text"
-            placeholder="Product Link"
-          />
-          <input
-            name="image"
-            value={this.state.image}
-            onChange={this.handleInputChange}
-            type="text"
-            placeholder="Product Image"
-          />
-          <textarea ref={(input) => this.description = input} placeholder="Product Description"></textarea>
-          <input
-            name="price"
-            value={this.state.image}
-            onChange={this.handleInputChange}
-            type="text"
-            placeholder="Product Price"
-          />
-          <label>Product Category<select ref={(input) => this.category = input}>
-            <option value="Crib">Crib</option>
-            <option value="Tech">Tech</option>
-            <option value="Threads">Threads</option>
-            <option value="Media">Media</option>
-          </select></label>
-          <label>Featured?<select ref={(input) => this.fullWidth = input}>
-            <option value={false}>No</option>
-            <option value={true}>Yes</option>
-          </select></label>
-          <button className="btn" type="submit"><FontAwesomeIcon iconDefinition={faPlus} /> Add Product</button>
-        </form>
+        <div className="form-container">
+          <h2>Add Product</h2>
+          <form onSubmit={this.onSubmit} className="product-edit">
+            <input 
+              name="productName"
+              value={this.state.productName}
+              onChange={this.handleInputChange}
+              type="text"
+              placeholder="Product Name"
+            />
+            <input
+              name="link"
+              value={this.state.link}
+              onChange={this.handleInputChange}
+              type="text"
+              placeholder="Product Link"
+            />
+            <input
+              name="image"
+              value={this.state.image}
+              onChange={this.handleInputChange}
+              type="text"
+              placeholder="Product Image"
+            />
+            <textarea ref={(input) => this.description = input} placeholder="Product Description"></textarea>
+            <input
+              name="price"
+              value={this.state.image}
+              onChange={this.handleInputChange}
+              type="text"
+              placeholder="Product Price"
+            />
+            <label>Product Category<select ref={(input) => this.category = input}>
+              <option value="Crib">Crib</option>
+              <option value="Tech">Tech</option>
+              <option value="Threads">Threads</option>
+              <option value="Media">Media</option>
+            </select></label>
+            <label>Featured?<select ref={(input) => this.fullWidth = input}>
+              <option value={false}>No</option>
+              <option value={true}>Yes</option>
+            </select></label>
+            <button className="btn" type="submit"><FontAwesomeIcon iconDefinition={faPlus} /> Add Product</button>
+          </form>
+        </div>
       </div>
     )
   }
