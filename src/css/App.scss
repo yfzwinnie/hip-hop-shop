@@ -478,11 +478,20 @@ a {
 .container {
   max-width: 70%;
   margin: 0 auto;
+  transition: max-width .4s;
 
   &:after {
     content: "";
     display: table;
     clear: both;
+  }
+
+  @media(max-width: 1024px) {
+    max-width: 80%;
+  }
+
+  @media(max-width: 850px) {
+    max-width: 95%;
   }
 }
 
@@ -573,6 +582,11 @@ a {
   float: left;
   border-radius: 5px;
   position: relative;
+
+  @media(max-width: 615px) {
+    width: 100%;
+    margin-bottom: 4%;
+  }
 
   .product-image {
     height: 254px;
