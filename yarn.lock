@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@fortawesome/fontawesome-free-regular@^5.0.2":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free-regular/-/fontawesome-free-regular-5.0.2.tgz#429af86bed14689f87648e6322983c65c782c017"
+
 "@fortawesome/fontawesome-free-solid@^0.0.15":
   version "0.0.15"
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free-solid/-/fontawesome-free-solid-0.0.15.tgz#881e4d37765d75886d6951a5a719291c088d4a3c"
