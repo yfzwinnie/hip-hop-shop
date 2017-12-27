@@ -93,7 +93,7 @@ class AddProductForm extends React.Component {
               <option value={false}>No</option>
               <option value={true}>Yes</option>
             </select></label>
-            <button className="btn" type="submit"><FontAwesomeIcon iconDefinition={faPlus} /> Add Product</button>
+            <button className="btn btn-primary" type="submit"><FontAwesomeIcon iconDefinition={faPlus} /> Add Product</button>
           </form>
         </div>
       </div>

@@ -1,0 +1,39 @@
+header {
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: $dark-grey;
+        color: $white;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        border-bottom: 1px solid darken($dark-grey, 5%);
+        z-index: 1000;
+
+        .navbar-header {
+            display: flex;
+            min-height: 50px;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin: 0 auto;
+            .search-icon {
+                #search-text {
+                    display: none;
+                }
+                color: $white;
+            }
+            .navbar-brand {
+                a {
+                    font-family: 'Monoton';
+                    color: $white;  
+                }
+            }
+        }
+        
+        
+        .collapse {
+            display: none;
+        }
+    }
+}
