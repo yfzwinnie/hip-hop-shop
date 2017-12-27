@@ -685,6 +685,18 @@ a {
   .product-description {
     font-size: .9em;
     color: lighten($dark-grey, 15%);
+    max-height:72px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    position:relative;
+  }
+
+  .product-description:before {
+    content:'';
+    width:100%;
+    height:100%;    
+    position:absolute;
+    background:linear-gradient(transparent 60px, white);
   }
 
   svg {

@@ -18,7 +18,7 @@ const products = [{
     name: "Biggie Smalls Socks",
     link: "http://www.eastbay.com/product/model:258941/sku:M545TIL/stance-the-illest-crew-socks-mens/multicolor/&SID=7726&inceptor=1&cm_mmc=SEM-_-PLA-_-Google-_-m545til&gclid=Cj0KCQjw0K7NBRC7ARIsAEaqLRHe2p2FYYw_ZGIIclA7if_xlLByVic9hJgCGiBDb-3QxORAfIZo6ooaAvl8EALw_wcB",
     image: "http://images.footlocker.com/is/image/EBFL2/M545TIL_fr_ven_sc7?id=898RF0&wid=751&hei=856&fmt=jpg",
-    description: "Puttin' 5 carats in my baby girl's ear... and 77% cotton on her feet with these Biggie Smalls tribute socks",
+    description: "Puttin' 5 carats in my baby girl's ear... and 77% cotton on her feet with these Biggie Smalls tribute socks. Puttin' 5 carats in my baby girl's ear... and 77% cotton on her feet with these Biggie Smalls tribute socks",
     price: 1599,
     category: "Threads",
     fullWidth: "false"
@@ -34,7 +34,7 @@ const products = [{
     name: "Tyler the Creator Print",
     link: "https://society6.com/product/tyler-the-creator-nextgen-rappers_print?utm_source=google&utm_medium=cpc&utm_campaign=1027&c_kid=1506960p4145&gclid=Cj0KCQjw0K7NBRC7ARIsAEaqLRHT-J1iDiSLO4_HOgYq4gVdLsdIY6tLF6qIQP4QX2QN_WJ4o9cWoRoaAg_5EALw_wcB#1=45&adpos=1o2&creative=102421901566&device=c&matchtype=&network=g",
     image: "https://ctl.s6img.com/society6/img/YYKWmNMnOxuRlq4YYZc-cJ57KVc/h_550,w_550/prints/~artwork/s6-0017/a/6009841_2993645/~~/tyler-the-creator-nextgen-rappers-prints.jpg",
-    description: "Gallery quality Giclée print on natural white, matte, ultra smooth, 100% cotton rag, acid and lignin free archival paper using Epson K3 archival inks. Custom trimmed with 1\" border for framing.",
+    description: "Gallery quality Giclée print on natural white, matte, ultra smooth, 100% cotton rag, acid and lignin free archival paper using Epson K3 archival inks. Custom trimmed with 1\" border for framing. Gallery quality Giclée print on natural white, matte, ultra smooth, 100% cotton rag, acid and lignin free archival paper using Epson K3 archival inks. Custom trimmed with 1\" border for framing.",
     price: 1520,
     category: "Crib",
     fullWidth: "false"
