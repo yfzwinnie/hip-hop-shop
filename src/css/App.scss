@@ -770,3 +770,88 @@ a {
 .product-edit textarea {
   height: 100px;
 }
+
+/* 404 Page
+   ========================================================================== */
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+.pre-loader {
+  font-family: sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight:bold;
+  margin-top: 10%;
+
+  p {
+    margin-top: 10px;
+    font-size: 1.2em;
+  }
+}
+
+.pre-loader:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.pnf-header {
+  display: inline-block;
+  font-size: 200px;
+  margin: 0 3%;
+  vertical-align: middle;
+}
+
+.css-vinyl-loader {
+  margin: 0 auto;
+  position: relative;
+  animation-name: spin;
+  animation-duration: 2.5s;
+  animation-iteration-count: 5; 
+  animation-timing-function: linear;
+  transform-origin: center center;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  display: inline-block;
+  vertical-align: middle;
+  
+  .inner-ring-1 {
+    position: absolute;
+    border-radius: 50%;
+    top: 50px;
+    left: 50px;
+    border-top: 2px solid grey;
+    border-bottom: 1px solid grey;
+    width: 100px;
+    height: 100px;
+  }
+   .inner-ring-2 {
+    position: absolute;
+    border-radius: 50%;
+    top: 25px;
+    left: 25px;
+    border-top: 1px solid grey;
+    border-bottom: 2px solid grey;
+    width: 150px;
+    height: 150px;
+  }
+  .inner-circle {
+    position: absolute;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-image: radial-gradient(black 10%, red 11%);
+    top: 80px;
+    left: 80px;
+  }
+}
