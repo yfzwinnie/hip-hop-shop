@@ -20,8 +20,9 @@ class Header extends React.Component {
 
   toggleMenu = () => {
     console.log("toggled");
-    this.setState({isMobileNavOpen: !this.state.isMobileNavOpen});
-    console.log(this.state.isMobileNavOpen);
+    this.setState((prevState) => {
+      return {isMobileNavOpen: !prevState.isMobileNavOpen};
+    }, () => {console.log(this.state.isMobileNavOpen);});
   }
 
   render() {
@@ -29,24 +30,27 @@ class Header extends React.Component {
       <header>      
         <nav className="navbar">
           <div className="navbar-header">
-            <FontAwesomeIcon iconDefinition={faBars} />
+            <a role="button" className="navbar-toggle" onClick={this.toggleMenu}>
+              <FontAwesomeIcon iconDefinition={faBars} />
+            </a>
             <div className="navbar-brand">
               <NavLink to="/">Boom &nbsp;Bap &nbsp;Shop</NavLink>
             </div>
-            <button className="search-icon">
-              <span id="search-text">Search</span><FontAwesomeIcon iconDefinition={faSearch} />
-            </button>
-          </div>
-          <div className="collapse navbar-collapse">
-            <div className="account-nav">
-              <ul>
-                <li>
-                  
-                </li>
+            <div className="top-nav">
+              <a role="button" className="search-icon">
+                <span id="search-text">Search</span><FontAwesomeIcon iconDefinition={faSearch} />
+              </a>
+              <ul className="account-nav hidden-sm">
                 <li><NavLink to="/signup">Signup</NavLink></li>
                 <li><NavLink to="/login">Login</NavLink></li>
               </ul>
             </div>
+          </div>
+          <div 
+            className={["collapse", "navbar-collapse"].concat(
+              this.state.isMobileNavOpen ? "navbar-collapse-show" : ""
+            ).join(' ')}
+          >
             <ul className="navbar-nav categories">
               <li><NavLink to={{pathname: '/', search: '?category=crib'}} isActive={() => this.parseUrl().category === "crib"}>Crib</NavLink></li>
               <li><NavLink to={{pathname: '/', search: '?category=tech'}} isActive={() => this.parseUrl().category === "tech"}>Tech</NavLink></li>

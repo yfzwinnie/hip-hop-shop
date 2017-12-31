@@ -31,6 +31,11 @@ html {
 
 body {
   margin: 0;
+  padding-top: 50px;
+
+  @media (min-width: $sm-screen - 1) {
+    padding-top: 0;
+  }
 }
 
 /**
