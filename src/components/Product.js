@@ -1,6 +1,7 @@
 import React from 'react';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { faBookmark, faShareSquare } from '@fortawesome/fontawesome-free-solid';
+import { faShareSquare } from '@fortawesome/fontawesome-free-solid';
+import { faBookmark } from '@fortawesome/fontawesome-free-regular';
 import { formatPrice } from '../helpers';
 
 class Product extends React.Component {
