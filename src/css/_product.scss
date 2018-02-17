@@ -1,0 +1,130 @@
+.product-detail {
+    background-color: $white;
+    height: 480px;
+    width: 46%;
+    margin: 2%;
+    box-shadow: 0 0 5px lighten($dark-grey, 50%);
+    padding: 15px;
+    float: left;
+    border-radius: 5px;
+    position: relative;
+  
+    @media(max-width: 615px) {
+      width: 100%;
+      margin-bottom: 4%;
+    }
+  
+    .product-image {
+      height: 254px;
+      text-align: center;
+  
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  
+    .product-name {
+      text-align: center;
+    }
+  
+    .product-action {
+      display: inline-block;
+      width: 75%;
+    
+      a {
+        display: inline;
+        background-color: $red;
+        padding: 4px 9px;
+        color: $white;
+  
+        &:hover {
+          background-color: darken($red, 15%);
+        }
+  
+        .product-price {
+          margin-left: 5px;
+          font-size: 0.8em;
+        }
+      }
+  
+      
+    }
+    .product-footer {
+      width: 100%;
+      position: absolute;
+      bottom: 15px;
+      left: 0;
+      padding: 0 15px 0 15px;
+    }
+  
+    .product-footer-icons {
+      display: inline-block;
+      width: 25%;
+      text-align: right;
+    }
+    
+  
+    .product-category {
+      text-align: center;
+    
+      span {
+         display: inline-block;
+         padding: 4px 9px;
+         font-size: .75em;
+         font-weight: bold;
+         color: $white;
+         text-transform: uppercase;
+         letter-spacing: -1px;
+         background-color: $dark-grey;
+      }
+    }
+  
+    .product-info {
+      margin: 10px 0 10px 0;
+  
+      h3 {
+        margin-top: 12px;
+        margin-bottom: 10px;
+      }
+    }
+  
+    .product-description {
+      font-size: .9em;
+      color: lighten($dark-grey, 15%);
+      max-height:72px;
+      overflow:hidden;
+      text-overflow: ellipsis;
+      position:relative;
+    }
+  
+    .product-description:before {
+      content:'';
+      width:100%;
+      height:100%;    
+      position:absolute;
+      background:linear-gradient(transparent 60px, white);
+    }
+  
+    svg {
+      color: $dark-grey;
+    }
+  }
+  
+  
+  
+  .full-width {
+    width: 95%;
+  }
+  
+  
+  
+  .full-width .product-info {
+    height: 55px;
+    margin-top: 0;
+  }
+  
+  .full-width .product-image {
+    height: 500px;
+    text-align: center;
+  }  

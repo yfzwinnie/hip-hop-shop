@@ -1,5 +1,6 @@
 import React from 'react';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 import { faShareSquare } from '@fortawesome/fontawesome-free-solid';
 import { faBookmark } from '@fortawesome/fontawesome-free-regular';
 import { formatPrice } from '../helpers';
@@ -16,9 +17,11 @@ class Product extends React.Component {
           </div>
           <div className="product-info">
             <h3 className="product-name">{name}</h3>
-            <div className="product-category">
-              <span>{category}</span>
-            </div> 
+            <Link to={{pathname: '/', search: `?category=${category.toLowerCase()}`}}>
+              <div className="product-category">
+                <span>{category}</span>
+              </div>
+            </Link>
             <p className="product-description">{description}</p>
             <div className="product-footer">
               <div className="product-action">
