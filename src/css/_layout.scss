@@ -1,0 +1,10 @@
+$sm-screen: 540px;
+
+.hidden-sm {
+    display: none;
+
+    @media (min-width: $sm-screen - 1) {
+        display: block;
+    }
+}
+

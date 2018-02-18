@@ -1,7 +1,11 @@
 /* import scss */
 @import './_colors.scss';
+@import './_layout.scss';
+@import './_buttons.scss';
 @import './_animations.scss';
+@import './_nav.scss';
 @import './_product.scss';
+
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 
@@ -29,6 +33,11 @@ html {
 
 body {
   margin: 0;
+  padding-top: 50px;
+
+  @media (min-width: $sm-screen - 1) {
+    padding-top: 0;
+  }
 }
 
 /**
@@ -494,103 +503,136 @@ a {
   @media(max-width: 850px) {
     max-width: 95%;
   }
+
 }
 
-.btn {
-  padding: 10px 15px;
-  border: none;
-  background-color: lighten($dark-grey, 25%);
-  color: $white;
-
-  &:hover {
-    cursor: pointer;
-    background-color: darken(lighten($dark-grey, 25%), 10%);
-  }
-
-  &.btn-primary {
-    background-color: $red;
-    text-transform: uppercase;
-    font-weight: bold;
-    box-shadow: inset 0 -3px rgba(0,0,0,.2);
-  }
-}
-
-.navigation-bar {
+.product-detail {
+  background-color: $white;
+  height: 480px;
+  width: 46%;
+  margin: 2%;
+  box-shadow: 0 0 5px lighten($dark-grey, 50%);
+  padding: 15px;
+  float: left;
+  border-radius: 5px;
   position: relative;
-  background-color: $dark-grey;
-  color: $white;
-  text-align: center;
-  text-transform: uppercase;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-bottom: .5px solid darken($dark-grey, 5%);
 
-  .logo {
-    
-    a {
-      text-align: center;
-      font-size: 2.75em;
-      color: $white;
-      font-family: 'Monoton', cursive;
-      padding: 20px 0 10px 0;
+  @media(max-width: 615px) {
+    width: 100%;
+    margin-bottom: 4%;
+  }
+
+  .product-image {
+    height: 254px;
+    text-align: center;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
     }
   }
 
-  .categories {
-    padding-left: 0;
-    list-style: none;
-    margin: 0 auto;
+  .product-name {
+    text-align: center;
+  }
+
+  .product-action {
     display: inline-block;
-    width: 80%;
+    width: 75%;
+  
+    a {
+      display: inline;
+      background-color: $red;
+      padding: 4px 9px;
+      color: $white;
 
-    li {
-      display: inline-block;
-      font-size: 1.15em;
-      margin: 10px 10px 0 10px;
-      overflow: hidden;
-      a {
-        color: $white;
-        position: relative;
-
-        &::after, ::after {
-          content: '';
-          position: absolute;
-          margin-top: 2px;
-          height: 2px;
-          width: 100%;
-          left: 0;
-          bottom: 0;
-          background: $white;
-          transform: translate3d(-100%,0,0) translate3d(-1px,0,0);
-          transition: transform 0.5s;
-          transition-timing-function: cubic-bezier(0.7,0,0.3,1);
-        }
-
-        &.active {
-          &::after {
-            transform: translate3d(0,0,0) translate3d(1px,0,0);
-          }
-        }
-      }
       &:hover {
-        a::after {
-          transform: translate3d(0,0,0);
-        }
+        background-color: darken($red, 15%);
       }
+
+      .product-price {
+        margin-left: 5px;
+        font-size: 0.8em;
+      }
+    }  
+  }
+  
+  .product-footer {
+    width: 100%;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    padding: 0 15px 0 15px;
+  }
+
+  .product-footer-icons {
+    display: inline-block;
+    width: 25%;
+    text-align: right;
+  }
+  
+
+  .product-category {
+    text-align: center;
+  
+    span {
+       display: inline-block;
+       padding: 4px 9px;
+       font-weight: bold;
+       color: $white;
+       text-transform: uppercase;
+       letter-spacing: -1px;
+       background-color: $dark-grey;
     }
   }
 
-  .search-icon {
-    color: $white;
-    font-weight: bold;
-    position: absolute;
-    right: 17%;
-    bottom: 20px;
-    text-transform: uppercase;
-    svg {
-      margin-left: 10px;
+  .product-info {
+    margin: 10px 0 10px 0;
+
+    h3 {
+      margin-top: 12px;
+      margin-bottom: 10px;
     }
   }
+
+  .product-description {
+    font-size: .9em;
+    color: lighten($dark-grey, 15%);
+    max-height:72px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    position:relative;
+  }
+
+  .product-description:before {
+    content:'';
+    width:100%;
+    height:100%;    
+    position:absolute;
+    background:linear-gradient(transparent 60px, white);
+  }
+
+  svg {
+    color: $dark-grey;
+  }
+}
+
+
+
+.full-width {
+  width: 95%;
+}
+
+
+
+.full-width .product-info {
+  height: 55px;
+  margin-top: 0;
+}
+
+.full-width .product-image {
+  height: 500px;
+  text-align: center;
 }
 
 .form-container {
