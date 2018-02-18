@@ -4,6 +4,8 @@
 @import './_buttons.scss';
 @import './_animations.scss';
 @import './_nav.scss';
+@import './_product.scss';
+
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 
@@ -504,8 +506,6 @@ a {
 
 }
 
-
-
 .product-detail {
   background-color: $white;
   height: 480px;
@@ -634,9 +634,6 @@ a {
   height: 500px;
   text-align: center;
 }
-
-
-
 
 .form-container {
   margin-top: 25px;
